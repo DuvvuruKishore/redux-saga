@@ -6,8 +6,7 @@ Here's a simple example to understand how Redux Saga works:
 Setup
 
 ```javascript
-Install Redux Saga: First, you need to install Redux Saga.
-```javascript
+Install Redux Saga: First, you need to install Redux Saga.```javascript
 
 ## npm install redux-saga
 

@@ -67,6 +67,8 @@ When a FETCH_USER action is detected, takeEvery automatically triggers the fetch
 This allows multiple FETCH_USER actions to be handled concurrently, meaning it doesn't block subsequent actions while one is being processed.
 In summary, mySaga continuously listens for FETCH_USER actions and initiates the fetchUser function each time such an action is dispatched.
 
+##reducers
+
 ```
 // reducers.js
 const initialState = {

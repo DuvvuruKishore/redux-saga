@@ -7,6 +7,7 @@ Setup
 
 ```javascript
 Install Redux Saga: First, you need to install Redux Saga.
+```javascript
 
 ## npm install redux-saga
 

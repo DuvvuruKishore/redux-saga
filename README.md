@@ -3,8 +3,9 @@
 ## How to Use Saga
 Here's a simple example to understand how Redux Saga works:
 
-## Setup
+Setup
 
+```javascript
 Install Redux Saga: First, you need to install Redux Saga.
 
 ## npm install redux-saga
@@ -12,6 +13,7 @@ Install Redux Saga: First, you need to install Redux Saga.
 import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
+```javascript
 // Worker Saga: will be fired on FETCH_USER actions
 function* fetchUser(action) {
   try {
@@ -28,6 +30,7 @@ function* mySaga() {
 }
 
 export default mySaga;
+
 
 ## explanation
 
@@ -62,7 +65,7 @@ When a FETCH_USER action is detected, takeEvery automatically triggers the fetch
 This allows multiple FETCH_USER actions to be handled concurrently, meaning it doesn't block subsequent actions while one is being processed.
 In summary, mySaga continuously listens for FETCH_USER actions and initiates the fetchUser function each time such an action is dispatched.
 
-
+```javascript
 // reducers.js
 const initialState = {
   user: null,
@@ -114,6 +117,7 @@ This separation of concerns ensures that asynchronous logic is handled cleanly b
 
 Set up your Redux store and include the Saga middleware.
 
+```javascript
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';

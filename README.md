@@ -30,7 +30,7 @@ function* mySaga() {
 }
 
 export default mySaga;
-
+```javascript
 
 ## explanation
 
@@ -84,7 +84,7 @@ function reducer(state = initialState, action) {
 }
 
 export default reducer;
-
+```javascript
 
 ## In the Redux Saga setup, the saga and the reducer have distinct roles:
 
@@ -137,7 +137,7 @@ const store = createStore(
 sagaMiddleware.run(mySaga);
 
 export default store;
-
+```javascript
 
 sagas and reducers work together seamlessly to handle both side effects and state management in a Redux application.
 

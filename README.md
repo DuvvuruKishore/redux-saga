@@ -5,12 +5,13 @@ Here's a simple example to understand how Redux Saga works:
 
 Setup
 
-```
 Install Redux Saga: First, you need to install Redux Saga.
+
+```
+npm install redux react-redux redux-saga axios
 ```
 
-## npm install redux-saga
-
+## Saga
 ```
 import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';

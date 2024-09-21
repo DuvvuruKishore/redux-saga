@@ -11,10 +11,10 @@ Install Redux Saga: First, you need to install Redux Saga.
 
 ## npm install redux-saga
 
+```
 import { call, put, takeEvery } from 'redux-saga/effects';
 import axios from 'axios';
 
-```javascript
 // Worker Saga: will be fired on FETCH_USER actions
 function* fetchUser(action) {
   try {
@@ -31,7 +31,7 @@ function* mySaga() {
 }
 
 export default mySaga;
-```javascript
+```
 
 ## explanation
 
@@ -66,7 +66,7 @@ When a FETCH_USER action is detected, takeEvery automatically triggers the fetch
 This allows multiple FETCH_USER actions to be handled concurrently, meaning it doesn't block subsequent actions while one is being processed.
 In summary, mySaga continuously listens for FETCH_USER actions and initiates the fetchUser function each time such an action is dispatched.
 
-```javascript
+```
 // reducers.js
 const initialState = {
   user: null,
@@ -85,7 +85,7 @@ function reducer(state = initialState, action) {
 }
 
 export default reducer;
-```javascript
+```
 
 ## In the Redux Saga setup, the saga and the reducer have distinct roles:
 
@@ -118,7 +118,7 @@ This separation of concerns ensures that asynchronous logic is handled cleanly b
 
 Set up your Redux store and include the Saga middleware.
 
-```javascript
+```
 import { createStore, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { Provider } from 'react-redux';
@@ -138,7 +138,7 @@ const store = createStore(
 sagaMiddleware.run(mySaga);
 
 export default store;
-```javascript
+```
 
 sagas and reducers work together seamlessly to handle both side effects and state management in a Redux application.
 
